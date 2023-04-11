@@ -1,0 +1,15 @@
+{% extends 'app_2/components/base.html' %}
+
+{% block title %} page3 {% endblock %}
+
+{% block content %}
+
+<h1>page3</h1>
+{% for d in data %}
+	<a href="{% url 'testpage2' d.id %}">link_{{d.id}}</a>
+	<hr>
+{% empty %}
+	<p>No link</p>
+{% endfor %}
+
+{% endblock %}

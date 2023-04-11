@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>App2_page2</title>
-</head>
-<body>
-	<h1>test page2</h1>
-	<h2>id = {{ id }}</h2>
-</body>
-</html>
+{% extends 'app_2/components/base.html' %}
+
+{% block title %} page2 {% endblock %}
+
+{% block content %}
+
+<h1>page2</h1>
+<h2>id = {{ data.id }}</h2>
+<h2>txt = {{ data.txt}}</h2>
+{% endblock %}
