@@ -1,0 +1,25 @@
+{% extends 'app_2/components/base.html' %}
+
+{% block title %} form {% endblock %}
+
+{% block content %}
+
+<h1>form</h1>
+
+<form action="{% url 'sub' %}" method="POST">
+	{% csrf_token %}
+	<!-- <div>
+		<label> position </label>
+		<input type="text" name="position">
+	</div>
+	<div>
+		<label> status </label>
+		<input type="checkbox" name="status" value="boss"><label>BOSS</label>
+		<input type="checkbox" name="status" value="std"><label>Student</label>
+	</div> -->
+	{{ form }}
+	<div>
+		<button type="submit">Submit</button>
+	</div>
+</form>
+{% endblock %}

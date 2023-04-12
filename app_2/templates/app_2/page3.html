@@ -6,7 +6,7 @@
 
 <h1>page3</h1>
 {% for d in data %}
-	<a href="{% url 'testpage2' d.id %}">link_{{d.id}}</a>
+	<a href="{% url 'testpage2' d.id %}">link_{{ d.position }}</a>
 	<hr>
 {% empty %}
 	<p>No link</p>
